@@ -50,6 +50,6 @@ To package whole project to *.tar.gz file, please run:
 ```
 This is useful for packaging and deployments. \
 **NOTE:** Compressed archive (*.tar.gz) will be saved 1 level above the project directory \
-**NOTE:** You might want to edit output package name - please check `BUILD_PKG_NAME` setting at: `./_dev/000-Config.sh`
-
+**NOTE:** You might want to edit output package name - please check `BUILD_PKG_NAME` setting at: `./_dev/000-Config.sh` \
+**NOTE:** Current date is automatically added to package name - this is useful for versioning 
 
