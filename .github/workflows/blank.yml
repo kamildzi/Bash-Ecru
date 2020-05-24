@@ -33,7 +33,3 @@ jobs:
     # Runs a single command using the runners shell
     - name: Package the project
       run: ./run.sh dev build
-    
-    # Runs a single command using the runners shell
-    - name: Remove the module
-      run: ./run.sh dev rm TestModule
