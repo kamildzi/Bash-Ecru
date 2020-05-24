@@ -27,7 +27,7 @@ Example: running the module named 'TestModule':
 
 # Developer module
 Ecru-Framework comes with a 'developer module'. It should be used for following actions: 
-### Creating new modules
+## Creating new modules
 To create a new module named 'TestModule' please run:
 ```bash
 ./run.sh dev init TestModule
@@ -36,14 +36,14 @@ As a result you will get:
 - `TestModule.sh` - main module script
 - `_TestModule` - directory with basic function and configuration examples
 
-### Removing the modules
+## Removing the modules
 To remove a module named 'TestModule' please run:
 ```bash
 ./run.sh dev rm TestModule
 ```
 It will ask you for a confirmation and remove the module. 
 
-### Packaging whole project
+## Packaging whole project
 To package whole project to *.tar.gz file, please run:
 ```bash
 ./run.sh dev build
