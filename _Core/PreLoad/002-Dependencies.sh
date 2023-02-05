@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Base functions - Dependencies
 
-# Include all the files from given catalog (Non-Recursive Mode)
+# Include all the files from given directory (Non-Recursive Mode)
+# $1 - directory path
 includeAll() {
     cd "$SCRIPT_ROOT"
     if [[ ! -d $1 ]]; then
@@ -15,7 +16,7 @@ includeAll() {
     fi
 }
 
-# Include all the files from given catalog (Recursive Mode)
+# Include all the files from given directory (Recursive Mode)
 # $1 - directory path
 includeAllRecursive() {
     cd "$SCRIPT_ROOT"
