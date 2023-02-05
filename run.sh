@@ -11,7 +11,7 @@ set -e
 IFS=$'\n'
 
 # Init _Core 
-PRELOAD_DIR="$( dirname "${BASH_SOURCE[0]}" )/_Core/PreLoad"
+declare -rg PRELOAD_DIR="$( dirname "${BASH_SOURCE[0]}" )/_Core/PreLoad"
 if [[ ! -d "$PRELOAD_DIR" ]]; then
     echo "No files to source at: $PRELOAD_DIR"
     exit 255
@@ -28,16 +28,16 @@ includeAllRecursive _Core/Framework
 cd "$SCRIPT_ROOT"
 checkParam "$1" "Module name"
 if [[ -f "$1"  ]]; then
-    MODULE_FILE="$1"
+    declare -rg MODULE_FILE="$1"
 elif [[ -f "$1.sh" ]]; then
-    MODULE_FILE="$1.sh"
+    declare -rg MODULE_FILE="$1.sh"
 else
     echo "$1 not found!"
     exit $ERROR_FILE
 fi
 
 # Set real module name
-MODULE_NAME=${MODULE_FILE::-3}
+declare -rg MODULE_NAME=${MODULE_FILE::-3}
 
 # Run the module
 shift
