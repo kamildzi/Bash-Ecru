@@ -5,11 +5,11 @@
 # $1 - variable to check on
 # $2 - variable name (printed to the user, optional)
 checkParam() {
-    PARAM="$1"
+    declare -r PARAM="$1"
     if [[ -z $2 ]]; then
-        PNAME="Parameter"
+        declare -r PNAME="Parameter"
     else
-        PNAME="$2"
+        declare -r PNAME="$2"
     fi
 
     if [[ -z $PARAM ]]; then

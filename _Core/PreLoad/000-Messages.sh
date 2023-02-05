@@ -2,18 +2,18 @@
 # Functions for common use - Core functions
 
 # Define colors (ANSI)
-C_RED='\033[0;31m'
-C_GREEN='\033[0;32m'
-C_BLUE='\033[0;34m'
-C_YELLOW='\033[1;33m'
-C_PURPLE='\033[0;35m'
-C_CYAN='\033[0;36m'
-C_NC='\033[0m' # no-color
+declare -rg C_RED='\033[0;31m'
+declare -rg C_GREEN='\033[0;32m'
+declare -rg C_BLUE='\033[0;34m'
+declare -rg C_YELLOW='\033[1;33m'
+declare -rg C_PURPLE='\033[0;35m'
+declare -rg C_CYAN='\033[0;36m'
+declare -rg C_NC='\033[0m' # no-color
 
 # Print error message
 # $1, $2, ... - message text 
 printError() {
-    row=1
+    declare row=1
     while (( "$#" )); do
         if [[ row -eq '1' ]]; then
             >&2 echo -e "${C_RED} [ERROR] $1${C_NC}"
@@ -28,7 +28,7 @@ printError() {
 # Print warning message
 # $1, $2, ... - message text 
 printWarning() {
-    row=1
+    declare row=1
     while (( "$#" )); do
         if [[ row -eq '1' ]]; then
             >&2 echo -e "${C_YELLOW} [WARNING] $1${C_NC}"

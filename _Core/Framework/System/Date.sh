@@ -3,7 +3,7 @@
 
 # Update $DATE variable with current system time
 updateDate() {
-    DATE=(`date +$DATE_FORMAT`)
+    declare -g DATE=(`date +$DATE_FORMAT`)
 }
 
 # Prints current date

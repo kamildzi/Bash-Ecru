@@ -4,7 +4,7 @@
 # Build new package
 # Might be usefull for deployments ;) 
 buildPkg() {
-    FilePath="../$BUILD_PKG_NAME-$DATE.tar.gz"
+    declare FilePath="../$BUILD_PKG_NAME-$DATE.tar.gz"
     if [[ -f "$FilePath" ]]; then
         printError "File already exists:" "$FilePath"
         exit $ERROR_FILE
@@ -20,7 +20,7 @@ buildPkg() {
 # $1 - App Name
 initApp() {
     checkParam "$1" "ModuleName"
-    ModuleName=$1
+    declare ModuleName=$1
 
     # Check ModuleName
     case "$ModuleName" in
@@ -59,7 +59,7 @@ initApp() {
 # $1 - App Name
 rmApp() {
     checkParam "$1" "ModuleName"
-    ModuleName=$1
+    declare ModuleName=$1
 
     RunFile="./$ModuleName.sh"
     ModuleDir="./_$ModuleName"

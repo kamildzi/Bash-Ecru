@@ -2,7 +2,7 @@
 # Base variables, for common use
 
 # Framework Version
-FRAMEWORK_VER='0.81'
+declare -rg FRAMEWORK_VER='0.82'
 
 # Project Root Path
-SCRIPT_ROOT=$( readlink -f $( dirname "${BASH_SOURCE[0]}" )/../.. )
+declare -rg SCRIPT_ROOT=$( readlink -f $( dirname "${BASH_SOURCE[0]}" )/../.. )
